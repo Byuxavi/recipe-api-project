@@ -1,0 +1,17 @@
+### Get all recipes
+GET http://localhost:8080/recipes
+
+### Create a recipe
+POST http://localhost:8080/recipes
+Content-Type: application/json
+
+{
+    "title": "Tacos al Pastor",
+    "ingredients": ["Pork", "Pineapple", "Onion", "Cilantro", "Tortillas"],
+    "instructions": "Marinate the meat, grill it, and serve on tortillas with pineapple.",
+    "prepTime": 45,
+    "servings": 4,
+    "difficulty": "Medium",
+    "category": "Mexican",
+    "calories": 350
+}
