@@ -1,13 +1,15 @@
 {
   "name": "recipe-api-project",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Recipe API project for BYU-I",
+  "main": "server.js", 
   "scripts": {
+    "start": "node server.js",
+    "swagger": "node swagger.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Javier Manosalva",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
