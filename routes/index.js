@@ -13,8 +13,7 @@ router.get('/', (req, res) => {
     }
 });
 
-router.use('/api-docs', swaggerUi.serve); // El use prepara el terreno y sirve esos archivos auxiliares.
-router.get('/api-docs', swaggerUi.setup(swaggerDocument)); // El get es el que finalmente entrega la página principal ya armada.
+router.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument)); // El use prepara el terreno y sirve esos archivos auxiliares.
 
 // Aquí conectamos todas las rutas de recetas
 router.use('/recipes', require('./recipes'));

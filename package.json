@@ -4,7 +4,7 @@
   "description": "Recipe API project for BYU-I",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node swagger.js && node server.js",
     "swagger": "node swagger.js",
     "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
