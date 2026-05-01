@@ -1,17 +1,56 @@
-### Get all recipes
+### ==========================================
+### LOCALHOST REQUESTS (Para desarrollo)
+### ==========================================
+
+### Get all recipes (Local)
 GET http://localhost:8080/recipes
 
-### Create a recipe
-POST http://localhost:8080/recipes
+### Get recipe by id (Local) - 
+GET http://localhost:8080/recipes/69f1b8e28f53667733a91d14
+
+### Create recipe (Local)
+POST http://localhost:8080/recipes HTTP/1.1
 Content-Type: application/json
 
 {
     "title": "Tacos al Pastor",
-    "ingredients": ["Pork", "Pineapple", "Onion", "Cilantro", "Tortillas"],
-    "instructions": "Marinate the meat, grill it, and serve on tortillas with pineapple.",
+    "ingredients": ["Pork", "Pineapple", "Onion", "Cilantro"],
+    "instructions": "Marinate and grill the meat.",
     "prepTime": 45,
     "servings": 4,
     "difficulty": "Medium",
     "category": "Mexican",
     "calories": 350
 }
+
+### Update recipe (Local)
+PUT http://localhost:8080/recipes/69f1b8e28f53667733a91d14 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Tacos al Pastor Especiales",
+    "ingredients": ["Pork", "Pineapple", "Onion", "Cilantro", "Extra Salsa"],
+    "instructions": "Marinate and grill the meat. Add extra salsa.",
+    "prepTime": 50,
+    "servings": 4,
+    "difficulty": "Medium",
+    "category": "Mexican",
+    "calories": 380
+}
+
+### Delete recipe (Local)
+DELETE http://localhost:8080/recipes/69f1b8e28f53667733a91d14 HTTP/1.1
+
+
+### ==========================================
+### RENDER REQUESTS
+### ==========================================
+
+### Get all recipes (Render)
+GET https://recipe-api-project-6e8p.onrender.com/recipes
+
+### Get recipe by id (Render)
+GET https://recipe-api-project-6e8p.onrender.com/recipes/69f1b8e28f53667733a91d14
+
+### Swagger Documentation (Render)
+GET https://recipe-api-project-6e8p.onrender.com/api-docs
